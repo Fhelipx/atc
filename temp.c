@@ -73,14 +73,17 @@ int main() {
     printf("! Welcome to the Temperature Converter !\n\n");
     printf(" 1 - Celsius \n 2 - Fahrenheit \n 3 - Kelvin \n\n");
 
-    printf("|| First Example Input: 3 34.5 || In this example, the temperature that is will be converted from is 34.5 Kelvin \n \n");
-
-    printf("Choose the first temperature to be converted from and input the values: ");
-    scanf("%d %f", &typeFrom, &temperature);
-    printf("\n || Second Example Input: 2 || In this example, the temperature scale that will be converted to is Kelvin\n \n");
-    printf("Now, Choose the second temperature Scale to be converted to: ");
-    scanf("%d", &typeTo);
-    finalConversion(typeFrom, typeTo, temperature);
+    while (1) {
+        printf("\n|| First Example Input: 3 34.5 || In this example, the temperature that is will be converted from is 34.5 Kelvin \n \n");
+        printf("Choose the first temperature to be converted from and input the values: ");
+        scanf("%d %f", &typeFrom, &temperature);
+        printf("\n || Second Example Input: 2 || In this example, the temperature scale that will be converted to is Kelvin\n \n");
+        printf("Now, Choose the second temperature Scale to be converted to: ");
+        scanf("%d", &typeTo);
+        printf("\n");
+        finalConversion(typeFrom, typeTo, temperature);
+        printf("\n");
+    }
 
     return 0;
 }
